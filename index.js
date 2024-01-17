@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/aelf");
+mongoose.connect("mongodb+srv://ateebahmed:ateeb1122%40@lbr.puyvnh1.mongodb.net/");
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
