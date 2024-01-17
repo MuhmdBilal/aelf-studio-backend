@@ -43,11 +43,12 @@ app.get('/api/post', async (req, res) => {
   
   app.post('/api/post', async (req, res) => {
     try {
-      const { wallet_id, url, allow_reaction, text } = req.body;
+      const { wallet_id, url, allow_reaction, text, image } = req.body;
       const newExample = new Post({
         wallet_id,
         url,
         text,
+        image,
         allow_reaction: allow_reaction || false, 
       });
  
